@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd ">
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <value>file:C:/EVEDatabaseConfig/database.properties</value>
+        </property>
+    </bean>
+
+    <!-- Initialization for data source -->
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="url" value="jdbc:sqlserver://localhost\sqlexpress;databaseName=${db.database}"/>
+        <property name="username" value="${db.user}"/>
+        <property name="password" value="${db.pass}"/>
+    </bean>
+
+    <!-- Definition for MarketJDBCTemplate bean -->
+    <bean id="MarketJDBCTemplate"
+          class="pw.redalliance.MarketTree.Updater.MarketJDBCTemplate">
+        <property name="dataSource"  ref="dataSource" />
+    </bean>
+
+</beans>
