@@ -1,22 +1,25 @@
 package pw.redalliance;
 
 import com.tree.TreeNode;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import pw.redalliance.MarketAPI.EveCentral.EveCentralMarketAPI;
-import pw.redalliance.MarketAPI.EveCentral.FakeAPI;
 import pw.redalliance.MarketTree.MarketGroup;
 import pw.redalliance.MarketTree.MarketTreeHandler;
-import pw.redalliance.MarketTree.MarketType;
-import pw.redalliance.MarketTree.Updater.MarketJDBCTemplate;
+import pw.redalliance.MarketTree.Updater.MarketTreeUpdater;
+import pw.redalliance.MarketTree.Updater.YAML.YAMLCategoryMapper;
+import pw.redalliance.MarketTree.Updater.YAML.YAMLReader;
 import pw.redalliance.PriceFile.PriceFileMaker;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
 public class Main {
     private static void test() {
+        String path = "./src/main/resources/categoryIDs.yaml";
+        System.out.println(YAMLReader.readYAML(path, new YAMLCategoryMapper()));
+//        MarketTreeUpdater upd = new MarketTreeUpdater();
+//        upd.readYAML("./src/main/resources/typeIDs.yaml");
+        if (true) return;
+
         System.out.println("Reading types from database");
         TreeNode<MarketGroup> tree = MarketTreeHandler.getFromDatabase();
         count(tree);
