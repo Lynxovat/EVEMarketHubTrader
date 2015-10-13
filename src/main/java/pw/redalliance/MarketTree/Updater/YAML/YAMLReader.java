@@ -21,7 +21,10 @@ public class YAMLReader {
             Map<Integer,T> outMap = new HashMap<>();
 
             for (Entry<Integer,Object> entry : result.entrySet()) {
-                outMap.put(entry.getKey(), mapper.map(entry.getValue()));
+                T mappedValue = mapper.map(entry.getValue());
+                if (mappedValue != null) {
+                    outMap.put(entry.getKey(), mappedValue);
+                }
             }
             return outMap;
         } catch (Exception e) {

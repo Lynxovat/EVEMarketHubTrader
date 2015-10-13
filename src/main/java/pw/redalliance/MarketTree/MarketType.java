@@ -1,5 +1,7 @@
 package pw.redalliance.MarketTree;
 
+import pw.redalliance.MarketTree.Updater.MarketTypeDBData;
+
 import java.io.Serializable;
 
 /**
@@ -62,13 +64,36 @@ public class MarketType implements Serializable {
         this.basePrice = basePrice;
     }
 
+    public int getMarketGroupId() {
+        return marketGroupId;
+    }
+
+    public void setMarketGroupId(int marketGroupId) {
+        this.marketGroupId = marketGroupId;
+    }
+
+    public int getIconId() {
+        return iconId;
+    }
+
+    public void setIconId(int iconId) {
+        this.iconId = iconId;
+    }
+
     private int typeId;
     private String name;
     private String category;
+    private int marketGroupId;
     private int metaLevel;
     private String metaGroup;
     private double volume;
     private double basePrice;
+    private int iconId;
+
+    public void setDBData(MarketTypeDBData data) {
+        setMetaLevel(data.getMetaLevel());
+        setMetaGroup(data.getMetaGroup());
+    }
 
     @Override
     public String toString() {

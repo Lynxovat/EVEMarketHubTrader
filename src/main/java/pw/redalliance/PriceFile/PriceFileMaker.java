@@ -4,10 +4,8 @@ import com.tree.TreeNode;
 import pw.redalliance.MarketAPI.MarketAPI;
 import pw.redalliance.MarketItem;
 import pw.redalliance.MarketTree.MarketGroup;
-import pw.redalliance.MarketTree.MarketTreeHandler;
 import pw.redalliance.MarketTree.MarketType;
 
-import java.io.*;
 import java.util.*;
 
 
@@ -22,8 +20,8 @@ public class PriceFileMaker {
     private static final Set<String> NPC_TRADED;
     static {
         Set<String> npcTraded = new HashSet<>();
-        npcTraded.add("Blueprints");
-        npcTraded.add("Skills");
+        npcTraded.add("Blueprint");
+        npcTraded.add("Skill");
         NPC_TRADED = Collections.unmodifiableSet(npcTraded);
     }
 
@@ -31,56 +29,63 @@ public class PriceFileMaker {
     private MarketAPI api;
     private BlueprintCalculator bpCalc = new BlueprintCalculator();
 
-    public void makePriceFile(TreeNode<MarketGroup> tree, MarketAPI api) {
+    public void makePriceFile(Collection<MarketType> types, MarketAPI api) {
         writer = new PriceFileWriter(filename);
         this.api = api;
-        processTree(tree);
+        processTypes(types);
         writer.close();
     }
 
-    private void processTree(TreeNode<MarketGroup> tree) {
-        for (TreeNode<MarketGroup> group : tree) {
-            if (group.data.hasTypes()) {
-                System.out.print(MarketTreeHandler.groupHierarchy(group) + " [" + group.data.getTypes().size() + "] ");
-                if (NPCTraded(group)) {
-                    processNPCTradedGroup(group);
-                } else {
-                    processMarketGroup(group);
-                }
-                System.out.println("OK");
+    private void processTypes(Collection<MarketType> types) {
+        System.out.println("Requesting market data from EVE-CENTRAL API:");
+        final int size = types.size();
+        int count = 0;
+        int threshold = 500;
+        for (MarketType type : types) {
+            if (NPCTraded(type)) {
+                processNPCTradedType(type);
+            } else {
+                processMarketType(type);
+            }
+            if ((++count % threshold) == 0) {
+                System.out.println("API: " + count + " types of " + size + " processed");
             }
         }
     }
 
-    private boolean NPCTraded(TreeNode<MarketGroup> group) {
-        TreeNode<MarketGroup> g = group;
-        while (g != null) {
-            if (NPC_TRADED.contains(g.data.getName())) {
-                return true;
-            }
-            g = g.parent;
-        }
-        return false;
+    private boolean NPCTraded(MarketType type) {
+        return NPC_TRADED.contains(type.getCategory());
     }
 
-    private void processNPCTradedGroup(TreeNode<MarketGroup> group) {
-        for (MarketType type : group.data.getTypes()) {
-            writer.printLine(type.getBasePrice(), type.getVolume(), type.getName());
-        }
+    private void processNPCTradedType(MarketType type) {
+        writer.printLine(type.getBasePrice(), type.getVolume(), type.getName());
     }
 
-    private void processMarketGroup(TreeNode<MarketGroup> group) {
-        for (MarketType type : group.data.getTypes()) {
-            MarketItem item = new MarketItem(type);
-            item.marketData = api.getData(type.getTypeId(), jitaId);
-            printItem(item);
-        }
+    private void processMarketType(MarketType type) {
+        MarketItem item = new MarketItem(type);
+        item.marketData = api.getData(type.getTypeId(), jitaId);
+        printItem(item);
     }
 
     private void printItem(MarketItem item) {
-        writer.printLine(item.marketData.getMaxBye(), item.type.getVolume(), item.type.getName());
+        double price = item.marketData.getMaxBye();
+        checkPrice(item.type, price, false);
+        writer.printLine(price, item.type.getVolume(), item.type.getName());
+
         if (bpCalc.calculateBlueprint(item)) {
-            writer.printLine(bpCalc.getPrice(), bpCalc.getVolume(), bpCalc.getName());
+            price = (bpCalc.getPrice());
+            checkPrice(item.type, price, true);
+            writer.printLine(price, bpCalc.getVolume(), bpCalc.getName());
         }
+    }
+
+    private void checkPrice(MarketType type, double price, boolean blueprint) {
+        if (price < 10e+9) return;
+        if ((!blueprint && type.getCategory().equals("Ship")) || (blueprint && type.getMetaGroup().equals("Tech II")) || type.getMetaGroup().equals("Officer")) return;
+        printWarning(type, price, blueprint);
+    }
+
+    private void printWarning(MarketType type, double price, boolean bpc) {
+        System.out.println("HIGH PRICE WARNING: " + type.getName() + (bpc ? " (BPC)" : "") + " price is " + price);
     }
 }

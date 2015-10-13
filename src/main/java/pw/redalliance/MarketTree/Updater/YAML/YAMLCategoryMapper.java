@@ -6,6 +6,6 @@ package pw.redalliance.MarketTree.Updater.YAML;
 public class YAMLCategoryMapper extends YAMLObjectMapper<String> {
     @Override
     protected String mapResult() {
-        return value("name.en");
+        return value_s("name.en");
     }
 }

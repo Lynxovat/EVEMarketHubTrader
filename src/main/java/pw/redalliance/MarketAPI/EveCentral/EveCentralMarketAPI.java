@@ -26,7 +26,7 @@ public class EveCentralMarketAPI implements MarketAPI {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+        return new ItemMarketData(0.0, 0.0, 0.0);
     }
 
     private static String makeUrlRequestString(int typeID, int systemID) {

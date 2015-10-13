@@ -12,5 +12,5 @@ import java.util.List;
 public interface MarketDAO {
     public void setDataSource(DataSource ds);
     public List<MarketGroup> listMarketGroup(int marketGroupId);
-    public List<MarketType> listMarketTypes(int marketGroupId);
+    public MarketTypeDBData getMarketTypeData(int typeId);
 }

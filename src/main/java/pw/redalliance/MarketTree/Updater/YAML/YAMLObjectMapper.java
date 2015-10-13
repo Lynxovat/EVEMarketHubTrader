@@ -19,19 +19,37 @@ public class YAMLObjectMapper<T> implements YAMLMapper {
         return (T)result;
     }
 
-    protected String value(String path) {
+    protected String value_s(String path) {
+        return (String)value(path, String.class, "");
+    }
+
+    protected Integer value_i(String path) {
+        return (Integer)value(path, Integer.class, 0);
+    }
+
+    protected Double value_d(String path) {
+        return (Double)value(path, Double.class, 0.0);
+    }
+
+    protected Boolean value_b(String path) {
+        return (Boolean)value(path, Boolean.class, false);
+    }
+
+    protected Object value(String path, Class<?> t, Object defaultValue) {
         String[] parts = path.split("\\.");
         int size = parts.length;
         Map<String,Object> map = result;
         for (int i = 0; i < size-1; ++i) {
             map = mp(map.get(parts[i]));
         }
-        return (String)map.get(parts[size-1]);
+        Object res = map.get(parts[size-1]);
+        if (res != null && res.getClass() == t) {
+            return res;
+        }
+        return defaultValue;
     }
 
     private static Map<String,Object> mp(Object o) {
         return (Map<String,Object>)o;
     }
-
-
 }

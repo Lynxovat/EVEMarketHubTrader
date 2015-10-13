@@ -2,7 +2,6 @@ package pw.redalliance.MarketTree.Updater;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import pw.redalliance.MarketTree.MarketGroup;
-import pw.redalliance.MarketTree.MarketType;
 
 import javax.sql.DataSource;
 import java.util.List;
@@ -32,21 +31,25 @@ public class MarketJDBCTemplate implements MarketDAO {
     }
 
     @Override
-    public List<MarketType> listMarketTypes(int marketGroupId) {
-        String sql = "SELECT t.typeID, t.typeName, categoryName, ISNULL(dta.valueFloat, dta.valueInt) AS metaLevel, mg.metaGroupName, t.volume, t.basePrice " +
-                "FROM dbo.invTypes AS t " +
-                "LEFT JOIN dbo.invGroups AS ig ON t.groupID=ig.groupID " +
-                "LEFT JOIN dbo.invCategories AS ic ON ig.categoryID=ic.categoryID " +
-                "LEFT JOIN dbo.invMetaTypes AS mt ON t.typeID=mt.typeID " +
-                "LEFT JOIN dbo.invMetaGroups AS mg ON mt.metaGroupID=mg.metaGroupID " +
-                "LEFT JOIN dbo.dgmTypeAttributes AS dta ON t.typeID=dta.typeID AND dta.attributeID=633 " +
-                "WHERE t.marketGroupID=" + marketGroupId + " AND t.published=1 " +
-//                "ORDER BY dta.valueFloat, dta.valueInt, t.typeName";
-                "ORDER BY metaLevel, t.typeName";
+    public MarketTypeDBData getMarketTypeData(int typeId) {
+        String sql = "SELECT mt.typeID, ISNULL(dta.valueFloat, dta.valueInt) AS metaLevel, mg.metaGroupName " +
+                "FROM dbo.invMetaTypes AS mt " +
+                "LEFT JOIN dbo.invMetaGroups AS mg ON mt.metaGroupID = mg.metaGroupID " +
+                "LEFT JOIN dbo.dgmTypeAttributes AS dta ON mt.typeID = dta.typeID AND dta.attributeID = 633 " +
+                "WHERE mt.typeID = ?";
 
-        List<MarketType> types = jdbcTemplateObject.query(sql, new MarketTypeMapper());
-        return types;
+        List<MarketTypeDBData> dataLst = jdbcTemplateObject.query(sql, new Object[]{typeId}, new MarketTypeDBDataMapper());
+        if (dataLst.isEmpty()) {
+            MarketTypeDBData data = new MarketTypeDBData();
+            data.setTypeId(typeId);
+            data.setMetaLevel(0);
+            data.setMetaGroup("Tech I");
+            return data;
+        } else if (dataLst.size() == 1) {
+            return dataLst.get(0);
+        } else {
+            System.out.println(typeId + " has multiple (" + dataLst.size() + ") results in getMarketTypeData sql request");
+            return dataLst.get(0);
+        }
     }
-
-
 }
