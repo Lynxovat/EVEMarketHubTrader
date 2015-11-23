@@ -80,7 +80,7 @@ public class PriceFileMaker {
     }
 
     private void checkPrice(MarketType type, double price, boolean blueprint) {
-        if (price < 10e+9) return;
+        if (price < 1e+9) return;
         if ((!blueprint && type.getCategory().equals("Ship")) || (blueprint && type.getMetaGroup().equals("Tech II")) || type.getMetaGroup().equals("Officer")) return;
         printWarning(type, price, blueprint);
     }

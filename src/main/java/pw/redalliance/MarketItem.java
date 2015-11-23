@@ -10,13 +10,23 @@ public class MarketItem {
     public final MarketType type;
     public ItemMarketData marketData;
 
+    public boolean isSelected() {
+        return selected;
+    }
+
+    public void setSelected(boolean selected) {
+        this.selected = selected;
+    }
+
+    private boolean selected = false;
+
     public MarketItem(MarketType type) {
         this.type = type;
     }
 
     @Override
     public String toString() {
-        return "MarketItem{" +
+        return "[" + (selected ? "X" : " ") + "] MarketItem{" +
                 "type=" + type +
                 ", marketData=" + marketData +
                 '}';

@@ -11,7 +11,22 @@
     </bean>
 
     <!-- Initialization for data source -->
-    <bean id="dataSource"
+    <bean id="staticDataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+        <property name="url" value="jdbc:sqlserver://localhost\sqlexpress;databaseName=${staticDb.database}"/>
+        <property name="username" value="${staticDb.user}"/>
+        <property name="password" value="${staticDb.pass}"/>
+    </bean>
+
+    <!-- Definition for MarketJDBCTemplate bean -->
+    <bean id="MarketJDBCTemplate"
+          class="pw.redalliance.MarketTree.Updater.MarketJDBCTemplate">
+        <property name="dataSource"  ref="staticDataSource" />
+    </bean>
+
+    <!-- Initialization for data source -->
+    <bean id="itemDataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
         <property name="url" value="jdbc:sqlserver://localhost\sqlexpress;databaseName=${db.database}"/>
@@ -20,9 +35,9 @@
     </bean>
 
     <!-- Definition for MarketJDBCTemplate bean -->
-    <bean id="MarketJDBCTemplate"
-          class="pw.redalliance.MarketTree.Updater.MarketJDBCTemplate">
-        <property name="dataSource"  ref="dataSource" />
+    <bean id="ItemJDBCTemplate"
+          class="pw.redalliance.MarketTree.DataBase.ItemJDBCTemplate">
+        <property name="dataSource"  ref="itemDataSource" />
     </bean>
 
 </beans>

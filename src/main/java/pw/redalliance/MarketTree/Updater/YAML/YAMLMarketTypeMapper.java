@@ -29,7 +29,7 @@ public class YAMLMarketTypeMapper extends YAMLObjectMapper<MarketType> {
     	type.setName(value_s("name.en"));
     	type.setCategory(categories.get(value_i("groupID")));
     	type.setVolume(value_d("volume"));
-    	type.setBasePrice(value_d("baseprice"));
+    	type.setBasePrice(value_d("basePrice"));
     	type.setIconId(value_i("iconId"));
         return type;
     }

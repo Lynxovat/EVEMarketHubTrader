@@ -6,6 +6,7 @@ import java.io.*;
  * Created by Lynx on 11.08.2015.
  */
 public class PriceFileWriter {
+    private int filteredOutItems = 0;
     private static final String ENCODING = "utf-8";
     private static final String BLUEPRINT_STRING = "Blueprint";
     private static final String ORIGINAL_SUFFIX = " (Original)";
@@ -25,13 +26,17 @@ public class PriceFileWriter {
 
     public void close() {
         try {
+            System.out.println("Filtered out items count: " + filteredOutItems);
             writer.close();
         } catch (Exception ex) {}
     }
 
     public void printLine(double price, double volume, String name) {
         try {
-            if (price == 0) return;
+            if (price == 0) {
+                ++filteredOutItems;
+                return;
+            }
             writer.write(String.join(" ", Double.toString(price), Double.toString(volume),
                     name.endsWith(BLUEPRINT_STRING)? name.concat(ORIGINAL_SUFFIX) : name));
             writer.write('\n');

@@ -24,7 +24,7 @@ public class EveCentralMarketAPI implements MarketAPI {
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             return parseResponse(con.getInputStream());
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("No market data for type: " + typeID);
         }
         return new ItemMarketData(0.0, 0.0, 0.0);
     }
