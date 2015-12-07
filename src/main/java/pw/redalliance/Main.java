@@ -1,100 +1,106 @@
 package pw.redalliance;
 
-import com.tree.TreeNode;
+import javafx.application.Application;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import pw.redalliance.MarketAPI.EveCentral.EveCentralMarketAPI;
 import pw.redalliance.MarketAPI.ItemMarketData;
 import pw.redalliance.MarketAPI.MarketAPI;
 import pw.redalliance.MarketTree.DataBase.ItemJDBCTemplate;
-import pw.redalliance.MarketTree.MarketGroup;
 import pw.redalliance.MarketTree.MarketType;
 import pw.redalliance.MarketTree.MarketTypesUpdater;
-import pw.redalliance.MarketTree.Updater.MarketJDBCTemplate;
 import pw.redalliance.PriceFile.PriceFileMaker;
+import pw.redalliance.ui.MarketTypesTree;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 
 public class Main {
-    private static void test() {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        boolean exit = false;
+        while (!exit) {
+            System.out.println("Select option:\n" +
+                    "0 - exit\n" +
+                    "1 - update database\n" +
+                    "2 - update prices\n" +
+                    "3 - show tree\n" +
+                    "4 - create prices file");
+            int n = reader.nextInt();
+            long startTime = System.nanoTime();
+            switch (n) {
+                case 0:
+                    exit = true;
+                    break;
+                case 1:
+                    updateDB();
+                    break;
+                case 2:
+                    updatePrices();
+                    break;
+                case 3:
+                    exit = true;
+                    showTree(args);
+                    break;
+                case 4:
+                    createPricesFile();
+                    break;
+                default:
+                    System.out.println("Number: " + n);
+            }
+            System.out.println("[MAIN] Elapsed time: " + TimeUnit.SECONDS.convert(System.nanoTime() - startTime, TimeUnit.NANOSECONDS));
+        }
+    }
+
+    private static void updateDB() {
         ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
         ItemJDBCTemplate itemTemplate = (ItemJDBCTemplate) context.getBean("ItemJDBCTemplate");
-//
-//        MarketItem it = itemTemplate.listSelectedItems().get(0);
-//        System.out.println(it);
-//        System.out.println(it.type.getName().length());
-//        if (true) return;
-//
-//        MarketType mt = new MarketType();
-//        mt.setTypeId(1);
-//        mt.setName("a");
-//        mt.setCategory("a_c");
-//        mt.setMarketGroupId(5);
-//        mt.setMetaLevel(1);
-//        mt.setMetaGroup("Tech I");
-//        mt.setVolume(10);
-//        mt.setBasePrice(500000);
-//        mt.setIconId(1);
-//        MarketItem item = new MarketItem(mt);
-//        item.marketData = new ItemMarketData(40000.9, 60000.5, 9432785);
-//        item.setSelected(true);
-//        List list = new ArrayList<MarketItem>();
-//        list.add(item);
-//
-//        itemTemplate.insertMarketItems(list);
-
-
+        itemTemplate.truncate();
         MarketTypesUpdater updater = new MarketTypesUpdater();
         Collection<MarketType> types = updater.makeMarketTypes();
-//        PriceFileMaker pfm = new PriceFileMaker();
-//        pfm.makePriceFile(types, new EveCentralMarketAPI());
-
         List items = new ArrayList<MarketItem>();
-        MarketAPI api = new EveCentralMarketAPI();
-        boolean a = true;
-        int counter = 0;
         for (MarketType type : types) {
             MarketItem item = new MarketItem(type);
-            item.marketData = api.getData(type.getTypeId(), 30000142);
-            item.setSelected(a);
+            item.marketData = new ItemMarketData(0, 0, 0);
             items.add(item);
-            a = !a;
+        }
+        itemTemplate.insertMarketItems(items);
+    }
+
+    private static void updatePrices() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+        ItemJDBCTemplate itemTemplate = (ItemJDBCTemplate) context.getBean("ItemJDBCTemplate");
+
+        List<MarketItem> items = itemTemplate.listItems();
+
+        MarketAPI api = new EveCentralMarketAPI();
+        int counter = 0;
+        System.out.println("Requesting market data from EVE-CENTRAL API");
+        for (MarketItem item : items) {
+            item.marketData = api.getData(item.type.getTypeId(), 30000142);
             if ((++counter % 500) == 0) {
-                System.out.println("API: " + counter + " types processed");
+                System.out.println("API: " + counter + " item processed");
             }
         }
 
         System.out.println("Inserting items");
-        itemTemplate.insertMarketItems(items);
-
-//        int i = 0;
-//        for (MarketType type : types) {
-//            if (++i > 100) return;
-//            System.out.println(type.toString());
-//        }
-//        MarketTreeUpdater upd = new MarketTreeUpdater();
-//        upd.readYAML("./src/main/resources/typeIDs.yaml");
-
-//        System.out.println("Reading types from database");
-
-//        System.out.println("\nMaking pricefile using EveCentral API");
-//        pfm.makePriceFile(tree, new EveCentralMarketAPI());
+        itemTemplate.updateItemsMarketData(items);
     }
 
-    public static void main(String[] args) {
-        long startTime = System.nanoTime();
-//        System.out.println("TEST");
-        test();
-        System.out.println("[MAIN] Elapsed time: " + TimeUnit.SECONDS.convert(System.nanoTime() - startTime, TimeUnit.NANOSECONDS));
+    private static void showTree(String[] args) {
+        Application.launch(MarketTypesTree.class, args);
+    }
+
+    private static void createPricesFile() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
+        ItemJDBCTemplate itemTemplate = (ItemJDBCTemplate) context.getBean("ItemJDBCTemplate");
+
+        PriceFileMaker pfm = new PriceFileMaker();
+        pfm.makePriceFile(itemTemplate.listItems());
     }
 }
 
-/*TODO:
--report IOException in PriceFileMaker.java
--issues: skill books are not in output
-         output has 9509 lines of 12113 types (even with b2 bpo and faction bpc)
-*/

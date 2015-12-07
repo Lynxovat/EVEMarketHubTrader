@@ -31,6 +31,20 @@ public class ItemJDBCTemplate implements ItemDAO {
     }
 
     @Override
+    public List<MarketItem> listMarketGroupItems(int id) {
+        String sql = "SELECT * FROM items WHERE marketGroupId = " + id;
+        List<MarketItem> items = jdbcTemplateObject.query(sql, new MarketItemMapper());
+        return items;
+    }
+
+    @Override
+    public List<MarketItem> listItems() {
+        String sql = "SELECT * FROM items";
+        List<MarketItem> items = jdbcTemplateObject.query(sql, new MarketItemMapper());
+        return items;
+    }
+
+    @Override
     public void insertMarketItems(List<MarketItem> items) {
         String sql = "INSERT INTO items (typeId,name,category,marketGroupId,metaLevel,metaGroup,volume,basePrice,iconId,maxBye,minSell,marketVolume,selected) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
         jdbcTemplateObject.batchUpdate(sql, new BatchPreparedStatementSetter() {
@@ -59,5 +73,43 @@ public class ItemJDBCTemplate implements ItemDAO {
                 return items.size();
             }
         });
+    }
+
+    @Override
+    public void updateItemSelected(MarketItem item) {
+        String sql = "UPDATE items SET selected = ? WHERE typeId = ?";
+        jdbcTemplateObject.update(sql, item.isSelected(), item.type.getTypeId());
+    }
+
+    @Override
+    public void updateItemMarketData(MarketItem item) {
+        String sql = "UPDATE items SET maxBye = ?, minSell = ?, marketVolume = ? WHERE typeId = ?";
+        jdbcTemplateObject.update(sql, item.marketData.getMaxBye(), item.marketData.getMinSell(), item.marketData.getVolume(), item.type.getTypeId());
+    }
+
+    @Override
+    public void updateItemsMarketData(List<MarketItem> items) {
+        String sql = "UPDATE items SET maxBye = ?, minSell = ?, marketVolume = ? WHERE typeId = ?";
+        jdbcTemplateObject.batchUpdate(sql, new BatchPreparedStatementSetter() {
+            @Override
+            public void setValues(PreparedStatement ps, int i) throws SQLException {
+                MarketItem item = items.get(i);
+                ps.setDouble(1, item.marketData.getMaxBye());
+                ps.setDouble(2, item.marketData.getMinSell());
+                ps.setDouble(3, item.marketData.getVolume());
+                ps.setInt(4, item.type.getTypeId());
+                ;
+            }
+
+            @Override
+            public int getBatchSize() {
+                return items.size();
+            }
+        });
+    }
+
+    @Override
+    public void truncate() {
+        jdbcTemplateObject.execute("TRUNCATE TABLE items");
     }
 }

@@ -14,7 +14,6 @@ import java.util.*;
  */
 
 public class PriceFileMaker {
-    private static final int jitaId = 30000142;
     private static final String filename = "output.txt";
 
     private static final Set<String> NPC_TRADED;
@@ -26,29 +25,20 @@ public class PriceFileMaker {
     }
 
     private PriceFileWriter writer;
-    private MarketAPI api;
     private BlueprintCalculator bpCalc = new BlueprintCalculator();
 
-    public void makePriceFile(Collection<MarketType> types, MarketAPI api) {
+    public void makePriceFile(Collection<MarketItem> items) {
         writer = new PriceFileWriter(filename);
-        this.api = api;
-        processTypes(types);
+        processItems(items);
         writer.close();
     }
 
-    private void processTypes(Collection<MarketType> types) {
-        System.out.println("Requesting market data from EVE-CENTRAL API:");
-        final int size = types.size();
-        int count = 0;
-        int threshold = 500;
-        for (MarketType type : types) {
-            if (NPCTraded(type)) {
-                processNPCTradedType(type);
+    private void processItems(Collection<MarketItem> items) {
+        for (MarketItem item : items) {
+            if (NPCTraded(item.type)) {
+                processNPCTradedType(item.type);
             } else {
-                processMarketType(type);
-            }
-            if ((++count % threshold) == 0) {
-                System.out.println("API: " + count + " types of " + size + " processed");
+                printItem(item);
             }
         }
     }
@@ -59,12 +49,6 @@ public class PriceFileMaker {
 
     private void processNPCTradedType(MarketType type) {
         writer.printLine(type.getBasePrice(), type.getVolume(), type.getName());
-    }
-
-    private void processMarketType(MarketType type) {
-        MarketItem item = new MarketItem(type);
-        item.marketData = api.getData(type.getTypeId(), jitaId);
-        printItem(item);
     }
 
     private void printItem(MarketItem item) {
