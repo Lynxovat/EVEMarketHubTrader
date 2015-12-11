@@ -8,11 +8,11 @@ import java.util.Map;
  * Created by Lynx on 13.10.2015.
  */
 public class YAMLMarketTypeMapper extends YAMLObjectMapper<MarketType> {
-	private Map<Integer,String> categories;
+	private Map<Integer,YAMLGroup> groups;    
 
-	public YAMLMarketTypeMapper(Map<Integer,String> categories) {
+	public YAMLMarketTypeMapper(Map<Integer,YAMLGroup> groups) {
 		super();
-		this.categories = categories;
+        this.groups = groups;		
 	}
 
     @Override
@@ -27,7 +27,9 @@ public class YAMLMarketTypeMapper extends YAMLObjectMapper<MarketType> {
     	MarketType type = new MarketType();
 		type.setMarketGroupId(marketGroupID);
     	type.setName(value_s("name.en"));
-    	type.setCategory(categories.get(value_i("groupID")));
+        YAMLGroup group = groups.get(value_i("groupID"));
+        type.setGroup(group.group);
+    	type.setCategory(group.category);
     	type.setVolume(value_d("volume"));
     	type.setBasePrice(value_d("basePrice"));
     	type.setIconId(value_i("iconId"));

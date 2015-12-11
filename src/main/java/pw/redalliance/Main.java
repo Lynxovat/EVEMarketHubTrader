@@ -87,7 +87,7 @@ public class Main {
             }
         }
 
-        System.out.println("Inserting items");
+        System.out.println("Updating items");
         itemTemplate.updateItemsMarketData(items);
     }
 

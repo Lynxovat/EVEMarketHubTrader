@@ -1,13 +1,11 @@
 package pw.redalliance.MarketTree.Updater.YAML;
 
-import pw.redalliance.MarketTree.MarketType;
-
 import java.util.Map;
 
 /**
  * Created by Lynx on 14.10.2015.
  */
-public class YAMLMarketGroupToCategoryMapper extends YAMLObjectMapper<String> {
+public class YAMLMarketGroupToCategoryMapper extends YAMLObjectMapper<YAMLGroup> {
 	private Map<Integer,String> categories;
 
 	public YAMLMarketGroupToCategoryMapper(Map<Integer,String> categories) {
@@ -16,7 +14,7 @@ public class YAMLMarketGroupToCategoryMapper extends YAMLObjectMapper<String> {
 	}
 
     @Override
-    protected String mapResult() {
-        return categories.get(value_i("categoryID"));
+    protected YAMLGroup mapResult() {
+        return new YAMLGroup(value_s("name.en"), categories.get(value_i("categoryID")));
     }
 }

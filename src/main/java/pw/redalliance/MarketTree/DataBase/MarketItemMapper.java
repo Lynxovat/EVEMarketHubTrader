@@ -24,13 +24,14 @@ public class MarketItemMapper implements RowMapper<MarketItem> {
     	MarketType mt = new MarketType();
     	mt.setTypeId(rs.getInt("typeId"));
     	mt.setName(rs.getString("name"));
+        mt.setGroup(rs.getString("itemGroup"));
     	mt.setCategory(rs.getString("category"));
     	mt.setMarketGroupId(rs.getInt("marketGroupId"));
     	mt.setMetaLevel(rs.getInt("metaLevel"));
     	mt.setMetaGroup(rs.getString("metaGroup"));
     	mt.setVolume(rs.getDouble("volume"));
     	mt.setBasePrice(rs.getDouble("basePrice"));
-    	mt.setIconId(rs.getInt("iconId"));
+    	mt.setIconId(rs.getInt("iconId"));        
     	return mt;
     }
 

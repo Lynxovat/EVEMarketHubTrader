@@ -3,10 +3,7 @@ package pw.redalliance.MarketTree;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import pw.redalliance.MarketTree.Updater.MarketJDBCTemplate;
-import pw.redalliance.MarketTree.Updater.YAML.YAMLCategoryMapper;
-import pw.redalliance.MarketTree.Updater.YAML.YAMLMarketGroupToCategoryMapper;
-import pw.redalliance.MarketTree.Updater.YAML.YAMLMarketTypeMapper;
-import pw.redalliance.MarketTree.Updater.YAML.YAMLReader;
+import pw.redalliance.MarketTree.Updater.YAML.*;
 
 import java.util.*;
 
@@ -46,9 +43,9 @@ public class MarketTypesUpdater {
         System.out.println("Processing YAML files:");
         Map<Integer,String> categories = YAMLReader.readYAML(path + "categoryIDs.yaml", new YAMLCategoryMapper());
         System.out.println("categories");
-        categories = YAMLReader.readYAML(path + "groupIDs.yaml", new YAMLMarketGroupToCategoryMapper(categories));
+        Map<Integer,YAMLGroup> groups = YAMLReader.readYAML(path + "groupIDs.yaml", new YAMLMarketGroupToCategoryMapper(categories));
         System.out.println("groups");
-        types = YAMLReader.readYAML(path + "typeIDs.yaml", new YAMLMarketTypeMapper(categories));
+        types = YAMLReader.readYAML(path + "typeIDs.yaml", new YAMLMarketTypeMapper(groups));
         System.out.println("types");
     }
 }

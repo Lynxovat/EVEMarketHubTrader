@@ -24,6 +24,14 @@ public class MarketType implements Serializable {
         this.name = name;
     }
 
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
     public String getCategory() {
         return category;
     }
@@ -78,17 +86,18 @@ public class MarketType implements Serializable {
 
     public void setIconId(int iconId) {
         this.iconId = iconId;
-    }
+    }    
 
     private int typeId;
     private String name;
+    private String group;
     private String category;
     private int marketGroupId;
     private int metaLevel;
     private String metaGroup;
     private double volume;
     private double basePrice;
-    private int iconId;
+    private int iconId;    
 
     public void setDBData(MarketTypeDBData data) {
         setMetaLevel(data.getMetaLevel());

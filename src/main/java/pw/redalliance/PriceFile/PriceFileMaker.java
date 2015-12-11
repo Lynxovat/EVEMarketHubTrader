@@ -1,12 +1,12 @@
 package pw.redalliance.PriceFile;
 
-import com.tree.TreeNode;
-import pw.redalliance.MarketAPI.MarketAPI;
 import pw.redalliance.MarketItem;
-import pw.redalliance.MarketTree.MarketGroup;
 import pw.redalliance.MarketTree.MarketType;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
 
 
 /**
@@ -17,11 +17,24 @@ public class PriceFileMaker {
     private static final String filename = "output.txt";
 
     private static final Set<String> NPC_TRADED;
+    private static final Set<String> EXPENSIVE_GROUPS;
     static {
         Set<String> npcTraded = new HashSet<>();
         npcTraded.add("Blueprint");
         npcTraded.add("Skill");
         NPC_TRADED = Collections.unmodifiableSet(npcTraded);
+
+        Set<String> gr = new HashSet<>();
+        gr.add("Titan");
+        gr.add("Supercarrier");
+        gr.add("Dreadnought");
+        gr.add("Carrier");
+        gr.add("Capital Industrial Ship");
+        gr.add("Freighter");
+        gr.add("Jump Freighter");
+        gr.add("Marauder");
+        gr.add("Black Ops");
+        EXPENSIVE_GROUPS = Collections.unmodifiableSet(gr);
     }
 
     private PriceFileWriter writer;
@@ -65,7 +78,9 @@ public class PriceFileMaker {
 
     private void checkPrice(MarketType type, double price, boolean blueprint) {
         if (price < 1e+9) return;
-        if ((!blueprint && type.getCategory().equals("Ship")) || (blueprint && type.getMetaGroup().equals("Tech II")) || type.getMetaGroup().equals("Officer")) return;
+        if (type.getMetaGroup().equals("Officer")) return;
+        if (EXPENSIVE_GROUPS.contains(type.getGroup())) return;
+        if (blueprint && type.getMetaGroup().equals("Tech II")) return;
         printWarning(type, price, blueprint);
     }
 
