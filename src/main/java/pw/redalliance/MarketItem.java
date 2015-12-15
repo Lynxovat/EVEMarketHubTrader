@@ -24,6 +24,11 @@ public class MarketItem {
         this.type = type;
     }
 
+    public MarketType getType() { return type; }
+
+    public ItemMarketData getMarketData() { return marketData; }
+    public void setMarketData(ItemMarketData data) { this.marketData = data; }
+
     @Override
     public String toString() {
         return "[" + (selected ? "X" : " ") + "] MarketItem{" +

@@ -370,6 +370,13 @@
         ru: Блоки сооружений
         zh: 建筑装备
     published: true
+87:
+    name:
+        de: Jäger
+        en: Fighter
+        fr: Combattant
+        ru: Истребители
+    published: true
 350001:
     name:
         de: Infanterie

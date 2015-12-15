@@ -780,11 +780,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Energievampir
-        en: Energy Vampire
-        fr: Vampire énergétique
+        de: Energie-Nosferatu
+        en: Energy Nosferatu
+        fr: Nosferatu à énergie
         ja: エネルギーバンパイア
-        ru: Устройство паразитной подзарядки накопителя
+        ru: Устройства паразитной подзарядки
         zh: 掠能器
     published: true
     useBasePrice: false
@@ -795,11 +795,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Energie-Destabilisator
-        en: Energy Destabilizer
-        fr: Déstabilisateur d’énergie
+        de: Energieneutralisierer
+        en: Energy Neutralizer
+        fr: Neutraliseur d'énergie
         ja: エネルギーディスタビライザー
-        ru: Дистанционный нейтрализатор заряда
+        ru: Дистанционные нейтрализаторы заряда
         zh: 能量扰乱设备
     published: true
     useBasePrice: false
@@ -1626,11 +1626,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Energievampir-Blueprint
-        en: Energy Vampire Blueprint
-        fr: Plan de construction Vampire énergétique
+        de: Nosferatu-Blaupause
+        en: Energy Nosferatu Blueprint
+        fr: Plan de construction Nosferatu à énergie
         ja: エネルギーバンパイヤブループリント
-        ru: Чертежи устройства паразитной подзарядки
+        ru: Чертежи устройств паразитной подзарядки
         zh: 掠能器蓝图
     published: true
     useBasePrice: true
@@ -1641,11 +1641,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Energie-Destabilisator-Blueprint
-        en: Energy Destabilizer Blueprint
-        fr: Plan de construction Déstabilisateur d'énergie
+        de: EEnergieneutralisierer-Blaupause
+        en: Energy Neutralizer Blueprint
+        fr: Plan de construction Neutraliseur d'énergie
         ja: エネルギーデスタビライザーブループリント
-        ru: Чертежи дистанционного нейтрализатора заряда
+        ru: Чертежи дистанционных нейтрализаторов заряда
         zh: 能量扰断设备蓝图
     published: true
     useBasePrice: true
@@ -2805,11 +2805,11 @@
     fittableNonSingleton: false
     iconID: 1639
     name:
-        de: Nachführstörer
-        en: Tracking Disruptor
-        fr: Perturbateur de suivi
+        de: Waffenstörer
+        en: Weapon Disruptor
+        fr: Perturbateur d'armement
         ja: トラッキング妨害器
-        ru: Станция создания помех системам наводки орудий
+        ru: Помехопостановщики наводке орудий
         zh: 索敌扰断器
     published: true
     useBasePrice: false
@@ -3480,11 +3480,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Nachführstörmodul-Blueprint
-        en: Tracking Disruptor Blueprint
-        fr: Plan de construction Perturbateur de suivi
+        de: Waffenstörer-Blaupause
+        en: Weapon Disruptor Blueprint
+        fr: Plan de construction Perturbateur d'armement
         ja: トラッキング妨害器ブループリント
-        ru: Чертеж модуля глушения системы слежения
+        ru: Чертежи помехопостановщика наводке орудий
         zh: 索敌扰断器蓝图
     published: true
     useBasePrice: true
@@ -9956,11 +9956,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Strukturen - Kontrollturm-Blueprints
-        en: Structures - Control Tower Blueprints
-        fr: Structures - Plans de construction Tour de contrôle
+        de: Sternenbasis - Kontrollturm-Blaupause
+        en: Starbase - Control Tower Blueprints
+        fr: Base stellaire – Plans de construction Tour de contrôle
         ja: 建造物-コントロールタワーブループリント
-        ru: Модули баз — чертеж башни управления
+        ru: Сооружения - чертежи башен управления базами
         zh: 结构 - 控制塔蓝图
     published: true
     useBasePrice: true
@@ -10136,11 +10136,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Strukturen - Laserbatterie-Blueprints
-        en: Structures - Laser Battery Blueprints
-        fr: Structures - Plans de construction Batterie de lasers
+        de: Sternenbasis - Laserbatterie-Blaupausen
+        en: Starbase - Laser Battery Blueprints
+        fr: Base stellaire – Plans de construction Batterie de lasers
         ja: 建造物-レーザーバッテリーブループリント
-        ru: Модули баз — чертеж лазерной батареи
+        ru: Сооружения - чертежи лазерного оружия
         zh: 结构 - 激光炮台蓝图
     published: true
     useBasePrice: true
@@ -10151,11 +10151,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Strukturen - Projektilbatterie-Blueprints
-        en: Structures - Projectile Battery Blueprints
-        fr: Structures - Plans de construction Batterie de projectiles
+        de: Sternenbasis - Projektilbatterie-Blaupausen
+        en: Starbase - Projectile Battery Blueprints
+        fr: Base stellaire – Plans de construction Batterie de projectiles
         ja: 建造物-プロジェクタイルバッテリーブループリント
-        ru: Модули баз — чертеж артиллерийской батареи
+        ru: Сооружения - чертежи баллистического оружия
         zh: 结构 - 射弹炮台蓝图
     published: true
     useBasePrice: true
@@ -10166,11 +10166,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Strukturen - Hybridbatterien-Blueprints
-        en: Structures - Hybrid Battery Blueprints
-        fr: Structures - Plans de construction Batterie hybride
+        de: Sternenbasis - Hybridbatterie-Blaupausen
+        en: Starbase - Hybrid Battery Blueprints
+        fr: Base stellaire – Plans de construction Batterie hybride
         ja: 建造物-ハイブリッドバッテリーブループリント
-        ru: Модули баз — чертеж батареи гибридного оружия
+        ru: Сооружения - чертежи гибридного оружия
         zh: 结构 - 混合炮台蓝图
     published: true
     useBasePrice: true
@@ -10181,11 +10181,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Strukturen - ECM-Störsender-Blueprints
-        en: Structures - ECM Jamming Array Blueprints
-        fr: Structures - Plans de construction Module de brouillage CME
+        de: Sternenbasis - ECM-Störsender-Blaupausen
+        en: Starbase - ECM Jamming Array Blueprints
+        fr: Base stellaire – Plans de construction Module de brouillage CME
         ja: 建造物-ECMジャミング施設ブループリント
-        ru: Модули баз — чертеж передатчика системы РЭБ
+        ru: Сооружения - чертежи передатчика системы РЭБ
         zh: 结构 - ECM干扰阵列蓝图
     published: true
     useBasePrice: true
@@ -10196,11 +10196,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Strukturen - Warp-Störer-Batterie-Blueprints
-        en: Structures - Warp Scrambling Battery Blueprints
-        fr: Structures - Plans de construction Batterie d'inhibition de warp
+        de: Sternenbasis - Warpstörer-Batterie-Blaupausen
+        en: Starbase - Warp Scrambling Battery Blueprints
+        fr: Base stellaire - Plans de construction Batterie d'inhibition de warp
         ja: 建造物-ワープスクランブルバッテリーブループリント
-        ru: Модули баз — чертеж батареи квантовых помех
+        ru: Сооружения - чертежи варп-глушителей
         zh: 结构 - 跃迁干扰波发射台蓝图
     published: true
     useBasePrice: true
@@ -10211,11 +10211,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Strukturen - Stasis-Webification-Batterie-Blueprints
-        en: Structures - Stasis Webification Battery Blueprints
-        fr: Structures - Plans de construction Batterie génératrice de stase
+        de: Sternenbasis - Btasisnetzbatterie-Blaupausen
+        en: Starbase - Stasis Webification Battery Blueprints
+        fr: Base stellaire  – Plans de construction Batterie génératrice de stase
         ja: 建造物―ステイシスウェビフェケーションバッテリーブループリント
-        ru: Модули баз — чертеж батареи постановки стазис-сети
+        ru: Сооружения - чертежи генераторов стазис-поля
         zh: 结构 - 停滞网状光束发射台蓝图
     published: true
     useBasePrice: true
@@ -10226,11 +10226,12 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Strukturen - Sensordämpfungsanlage-Blueprints
-        en: Structures - Sensor Dampening Array Blueprints
-        fr: Structures - Plans de construction Module d'atténuation de détection
+        de: Sternenbasis - Sensordämpfungsanlage-Blaupausen
+        en: Starbase - Sensor Dampening Array Blueprints
+        fr: Base stellaire – Structures – Plans de construction Module d'atténuation
+            de détection
         ja: 建造物-センサー妨害施設ブループリント
-        ru: Модули баз — чертеж системы подавления сенсоров
+        ru: Сооружения - чертежи передатчиков помех системам обнаружения целей
         zh: 结构 - 感应抑阻天线阵列蓝图
     published: true
     useBasePrice: true
@@ -10241,11 +10242,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Strukturen - Energieneutralisierungsbatterie-Blueprints
-        en: Structures - Energy Neutralizing Battery Blueprints
-        fr: Structures - Plans de construction Batterie de neutralisation d'énergie
+        de: Sternenbasis - Energieneutralisierungsbatterie-Blaupausen
+        en: Starbase - Energy Neutralizing Battery Blueprints
+        fr: Base stellaire – Plans de construction Batterie de neutralisation d'énergie
         ja: 建造物-エネルギー無効化バッテリーブループリント
-        ru: Модули баз — чертеж батареи нейтрализации энергии
+        ru: Сооружения - чертежи батареи нейтрализации заряда
         zh: 结构 - 能量中和波发射台蓝图
     published: true
     useBasePrice: true
@@ -10391,11 +10392,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Strukturen - Raketenbatterie-Blueprints
-        en: Structures - Missile Battery Blueprints
-        fr: Structures - Plans de construction Batterie de missiles
+        de: Sternenbasis - Lenkwaffenbatterie-Blaupausen
+        en: Starbase - Missile Battery Blueprints
+        fr: Base stellaire – Plans de construction Batterie de missiles
         ja: 建造物-ミサイル兵器ブループリント
-        ru: Модули баз — чертеж ракетной батареи
+        ru: Сооружения - чертежи ракетного оружия
         zh: 结构 - 导弹发射塔蓝图
     published: true
     useBasePrice: true
@@ -10676,11 +10677,11 @@
     fittableNonSingleton: false
     iconID: 0
     name:
-        de: Strukturen - Blueprints für mobile Labore
-        en: Structures - Mobile Laboratory Blueprints
-        fr: Structures - Plans de construction Laboratoire mobile
+        de: Sternenbasis - Mobiles Labor-Blaupause
+        en: Starbase - Mobile Laboratory Blueprints
+        fr: Base stellaire – Plans de construction Laboratoire mobile
         ja: 建造物-移動型研究所ブループリント
-        ru: Модули баз — чертеж передвижной лаборатории
+        ru: Сооружения - чертежи передвижной лаборатории
         zh: 结构 - 移动实验室蓝图
     published: true
     useBasePrice: true
@@ -10927,11 +10928,11 @@
     fittableNonSingleton: true
     iconID: 1639
     name:
-        de: Script zur Störung von Nachführsystemen
+        de: Waffenstörungsskript
         en: Tracking Disruption Script
         fr: Script de perturbation de poursuite
         ja: トラッキング妨害スクリプト
-        ru: Прошивка для станции создания помех системам наводки
+        ru: Прошивка глушения систем наводки
         zh: 跟踪干扰脚本
     published: true
     useBasePrice: false
@@ -12194,11 +12195,11 @@
     categoryID: 9
     fittableNonSingleton: false
     name:
-        de: Struktur-Blueprint
-        en: Structure Blueprint
-        fr: Plan de construction Structure
+        de: Sternenbasenblaupause
+        en: Starbase Blueprint
+        fr: Plan de construction Base stellaire
         ja: 建造物ブループリント
-        ru: Structure Blueprint
+        ru: Чертежи ПОСов
         zh: 建筑蓝图
     published: true
     useBasePrice: true
@@ -15388,7 +15389,12 @@
     categoryID: 11
     fittableNonSingleton: false
     name:
+        de: Blood Raider Event-Schlachtschiff
         en: Blood Raider Event Battleship
+        fr: Cuirassé d'événement blood raider
+        ja: ブラッドレイダー仕様イベント戦艦
+        ru: Особый линкор «Союза охотников за кровью»
+        zh: 血袭者事件战列舰
     published: false
     useBasePrice: false
 1453:
@@ -15397,7 +15403,12 @@
     categoryID: 11
     fittableNonSingleton: false
     name:
+        de: Blood Raider Event-Fregatte
         en: Blood Raider Event Frigate
+        fr: Frégate d'événement blood raider
+        ja: ブラッドレイダー仕様イベントフリゲート
+        ru: Особый фрегат «Союза охотников за кровью»
+        zh: 血袭者事件护卫舰
     published: false
     useBasePrice: false
 1454:
@@ -15406,7 +15417,12 @@
     categoryID: 11
     fittableNonSingleton: false
     name:
+        de: Blood Raider Event-Kreuzer
         en: Blood Raider Event Cruiser
+        fr: Croiseur d'événement blood raider
+        ja: ブラッドレイダー仕様イベント巡洋艦
+        ru: Особый крейсер «Союза охотников за кровью»
+        zh: 血袭者事件巡洋舰
     published: false
     useBasePrice: false
 1455:
@@ -15415,9 +15431,53 @@
     categoryID: 11
     fittableNonSingleton: false
     name:
+        de: Blood Raider Event-Schlachtkreuzer
         en: Blood Raider Event Battlecruiser
+        fr: Croiseur de bataille d'événement blood raider
+        ja: ブラッドレイダー仕様イベント巡洋戦艦
+        ru: Особый линейный крейсер «Союза охотников за кровью»
+        zh: 血袭者事件战列巡洋舰
     published: false
     useBasePrice: false
+1461:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    iconID: 2703
+    name:
+        de: Unbekannte Blaupause
+        en: Unknown Blueprint
+        fr: Plan de construction inconnu
+        ja: 未知のブループリント
+        ru: Неизвестные чертежи
+        zh: 未知蓝图
+    published: false
+    useBasePrice: false
+1462:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur-Blaupausen
+        en: Structure Blueprints
+        fr: Plans de construction Structure
+        ru: Чертежи сооружений
+    published: false
+    useBasePrice: true
+1463:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Modul-Blaupausen
+        en: Structure Module Blueprints
+        fr: Plan de construction Module de structure
+        ru: Чертежи модулей сооружений
+    published: false
+    useBasePrice: true
 1465:
     anchorable: false
     anchored: false
@@ -15425,8 +15485,982 @@
     fittableNonSingleton: false
     iconID: 0
     name:
+        de: 'Missionen: Standard-Supercarrier'
         en: Mission Generic Supercarrier
+        fr: Cuirassés génériques mission
+        ja: 汎用大型艦載機母艦
+        ru: СуперКАР боевой группы
+        zh: 任务通用超级航母
     published: false
+    useBasePrice: false
+1467:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Verwaltungsdienstmodul-Blaupause
+        en: Structure - Administration Service Module Blueprint
+        fr: Structure – Plan de construction Module de service Administration
+        ru: Сооружения - чертежи административных служебных модулей
+    published: false
+    useBasePrice: true
+1468:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Werbedienstmodul-Blaupause
+        en: Structure - Advertisement Service Module Blueprint
+        fr: Structure – Plan de construction Module de service Publicité
+        ru: Сооружения - чертежи служебных модулей центров пропаганды
+    published: false
+    useBasePrice: true
+1469:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - AoE-Lenkwaffenwerfer-Blaupause
+        en: Structure - AoE Missile Launcher Blueprint
+        fr: Structure – Plan de construction Lanceur de missiles à effet de zone
+        ru: Сооружения - чертежи пусковых установок ракет объёмного взрыва
+    published: false
+    useBasePrice: true
+1470:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Fertigungsdienstmodul-Blaupause
+        en: Structure - Assembly Service Module Blueprint
+        fr: Structure – Plan de construction Module de service Assemblage
+        ru: Сооружения - чертежи сборочных служебных модулей
+    published: false
+    useBasePrice: true
+1471:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Ballistisches-Kontrollsystem-Blaupause
+        en: Structure - Ballistic Control System Blueprint
+        fr: Plan de construction Structure – Système de contrôle balistique
+        ru: Сооружения - чертежи приборов контроля траектории
+    published: false
+    useBasePrice: true
+1472:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Repulsorfeld-Blaupause
+        en: Structure - Repulsor Field Blueprint
+        fr: Structure – Plan de construction Champ de répulsion
+        ru: Сооружения - чертежи гравипульсов
+    published: false
+    useBasePrice: true
+1473:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Citadel-Dienstmodul-Blaupause
+        en: Structure - Citadel Service Module Blueprint
+        fr: Structure – Plan de construction Module de service Citadelle
+        ru: Сооружения - чертежи служебных модулей цитаделей
+    published: false
+    useBasePrice: true
+1474:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - CPU-Erweiterung-Blaupause
+        en: Structure - CPU Enhancer Blueprint
+        fr: Structure – Plan de construction Optimisateur de CPU
+        ru: Сооружения - чертежи сопроцессоров
+    published: false
+    useBasePrice: true
+1475:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Verteidigungsbatterie-Blaupause
+        en: Structure - Defense Battery Blueprint
+        fr: Structure – Plan de construction Batterie de défense ciblée
+        ru: Сооружения - чертежи систем защиты
+    published: false
+    useBasePrice: true
+1476:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Doomsday-Waffe-Blaupause
+        en: Structure - Doomsday Weapon Blueprint
+        fr: Structure – Plan de construction Arme d'annihilation de structure
+        ru: Сооружения - чертежи орудий судного дня
+    published: false
+    useBasePrice: true
+1477:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Bohrdienstmodul-Blaupause
+        en: Structure - Drilling Service Module Blueprint
+        fr: Structure – Plan de construction Module de service Forage
+        ru: Сооружения - чертежи буровых модулей
+    published: false
+    useBasePrice: true
+1478:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Drohnenverbesserungsmodul-Blaupause
+        en: Structure - Drone Augmentor Module Blueprint
+        fr: Structure – Plan de construction Module stimulateur de drone
+        ru: Сооружения - чертежи модулей усиления дронов
+    published: false
+    useBasePrice: true
+1479:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Drohnen-Schadensverstärker-Blaupause
+        en: Structure - Drone Damage Amplifier Blueprint
+        fr: Structure – Plan de construction Amplificateur de dégâts de drone
+        ru: Сооружения - чертежи пакетов модернизации систем управления дронами
+    published: false
+    useBasePrice: true
+1480:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Drohnen-Nachführverbesserung-Blaupause
+        en: Structure - Drone Tracking Enhancer Blueprint
+        fr: Structure –  Plan de construction Optimisateur de suivi de drone
+        ru: Сооружения - чертежи приводов наводки бортового оружия дронов
+    published: false
+    useBasePrice: true
+1481:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - ECM-Blaupause
+        en: Structure - ECM Blueprint
+        fr: Structure – Plan de construction CME
+        ru: Сооружения - чертежи генераторов помех системам сопровождения целей
+    published: false
+    useBasePrice: true
+1482:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur Energieneutralisierer-Blaupause
+        en: Structure - Energy Neutralizer Blueprint
+        fr: Structure – Plan de construction Neutraliseur d'énergie
+        ru: Сооружения - чертежи дистанционных нейтрализаторов заряда
+    published: false
+    useBasePrice: true
+1483:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Leitverbesserung-Blaupause
+        en: Structure - Guidance Enhancer Blueprint
+        fr: Structure – Plan de construction Optimisateur de guidage
+        ru: Сооружения - чертежи корректоров траекторий ракет
+    published: false
+    useBasePrice: true
+1484:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Lenkwaffenleitcomputer-Blaupause
+        en: Structure - Missile Guidance Computer Blueprint
+        fr: Structure – Plan de construction Ordinateur de guidage de missiles
+        ru: Сооружения - чертежи модулей наведения ракет
+    published: false
+    useBasePrice: true
+1485:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Lenkwaffenwerfer-Blaupause
+        en: Structure - Missile Launcher Blueprint
+        fr: Structure – Plan de construction Lanceur de missiles
+        ru: Сооружения - чертежи пусковых установок ракет
+    published: false
+    useBasePrice: true
+1486:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Überwachungsanlage-Dienstmodul-Blaupause
+        en: Structure - Observatory Service Module Blueprint
+        fr: Structure – Plan de construction Module de service Observatoire
+        ru: Сооружения - чертежи служебных модулей разведкомплексов
+    published: false
+    useBasePrice: true
+1487:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Leistungsdiagnosesystem-Blaupause
+        en: Structure - Power Diagnostic System Blueprint
+        fr: Structure – Plan de construction Système de diagnostic de puissance
+        ru: Сооружения - чертежи систем диагностики энергосети
+    published: false
+    useBasePrice: true
+1488:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Reaktorkontrolleinheit-Blaupause
+        en: Structure - Reactor Control Unit Blueprint
+        fr: Structure – Plan de construction Unités de contrôle du réacteur
+        ru: Сооружения - чертежи систем управления реактором
+    published: false
+    useBasePrice: true
+1489:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Panzerungs-Fernreparatursystem-Blaupause
+        en: Structure - Remote Armor Repairer Blueprint
+        fr: Structure – Plan de construction Réparateur de blindage à distance
+        ru: Сооружения - чертежи установок дистанционного ремонта брони
+    published: false
+    useBasePrice: true
+1490:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Energiespeicher-Ferntransmitter-Blaupause
+        en: Structure - Remote Capacitor Transmitter Blueprint
+        fr: Structure – Plan de construction Transmetteur de capaciteur à distance
+        ru: Сооружения - чертежи установок дистанционного энергоснабжения
+    published: false
+    useBasePrice: true
+1491:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Rumpf-Fernreparatursystem-Blaupause
+        en: Structure - Remote Hull Repairer Blueprint
+        fr: Structure – Plan de construction Réparateur de coque à distance
+        ru: Сооружения - чертежи установок дистанционного ремонта корпуса
+    published: false
+    useBasePrice: true
+1492:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Lenkwaffen-Fernleitcomputer-Blaupause
+        en: Structure - Remote Missile Guidance Computer Blueprint
+        fr: Structure – Plan de construction Ordinateur de guidage de missiles à distance
+        ru: Сооружения - чертежи ретрансляторов данных наведения ракет
+    published: false
+    useBasePrice: true
+1493:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Sensorfernbooster-Blaupause
+        en: Structure - Remote Sensor Booster Blueprint
+        fr: Structure – Plan de construction Amplificateur de détection à distance
+        ru: Сооружения - чертежи ретрансляторов систем обнаружения целей
+    published: false
+    useBasePrice: true
+1494:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Sensorferndämpfer-Blaupause
+        en: Structure - Remote Sensor Dampener Blueprint
+        fr: Structure – Plan de construction Atténuateur de détection à distance
+        ru: Сооружения - чертежи передатчиков помех системам обнаружения целей
+    published: false
+    useBasePrice: true
+1495:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Schildfernbooster-Blaupause
+        en: Structure - Remote Shield Booster Blueprint
+        fr: Structure – Plan de construction Booster de bouclier à distance
+        ru: Сооружения - чертежи установок дистанционной накачки силовых полей
+    published: false
+    useBasePrice: true
+1496:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Fernleitcomputer-Blaupause
+        en: Structure - Remote Tracking Computer Blueprint
+        fr: Structure – Plan de construction Ordinateur de suivi à distance
+        ru: Сооружения - чертежи ретрансляторов данных наводки
+    published: false
+    useBasePrice: true
+1497:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Forschungsdienstmodul-Blaupause
+        en: Structure - Research Service Module Blueprint
+        fr: Structure – Plan de construction Module de service de recherche
+        ru: Сооружения - чертежи лабораторных служебных модулей
+    published: false
+    useBasePrice: true
+1498:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Sensorbooster-Blaupause
+        en: Structure - Sensor Booster Blueprint
+        fr: Structure – Plan de construction Amplificateur de détection
+        ru: Сооружения - чертежи активных усилителей для систем обнаружения целей
+    published: false
+    useBasePrice: true
+1499:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Sprungtor-Dienstmodul-Blaupause
+        en: Structure - Stargate Service Module Blueprint
+        fr: Structure – Plan de construction Module de service de portail stellaire
+        ru: Сооружения - чертежи служебных модулей для ворот
+    published: false
+    useBasePrice: true
+1500:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Stasisnetz-Blaupause
+        en: Structure - Stasis Webifier Blueprint
+        fr: Structure – Plan de construction Générateur de stase
+        ru: Сооружения - чертежи генераторов стазис-поля
+    published: false
+    useBasePrice: true
+1501:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Zielmarkierung-Blaupause
+        en: Structure - Target Painter Blueprint
+        fr: Structure – Plan de construction Marqueur de cible
+        ru: Соружениея - чертежи систем подсветки целей
+    published: false
+    useBasePrice: true
+1502:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Leitcomputer-Blaupause
+        en: Structure - Tracking Computer Blueprint
+        fr: Structure – Plan de construction Ordinateur de suivi
+        ru: Сооружения - чертежи орудийных вычислителей
+    published: false
+    useBasePrice: true
+1503:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Nachführungsstörer-Blaupause
+        en: Structure - Tracking Disruptor Blueprint
+        fr: Structure – Plan de construction Perturbateur de suivi
+        ru: Сооружения - чертежи станций создания помех системам наводки орудий
+    published: false
+    useBasePrice: true
+1504:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Nachführverbesserung-Blaupause
+        en: Structure - Tracking Enhancer Blueprint
+        fr: Structure – Plan de construction Optimisateur de suivi
+        ru: Сооружения - чертежи приводов наводки орудий
+    published: false
+    useBasePrice: true
+1505:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Schifftraktorstrahl-Blaupause
+        en: Structure - Ship Tractor Beam Blueprint
+        fr: Structure – Plan de construction Rayon de tractage de vaisseau
+        ru: Сооружения - чертежи корабельных гравизахватов
+    published: false
+    useBasePrice: true
+1506:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Taktisches Netzwerk-Blaupause
+        en: Structure - Warfare Link Blueprint
+        fr: Structure – Plan de construction Liaison tactique
+        ru: Сооружения - чертежи систем управления боем
+    published: false
+    useBasePrice: true
+1507:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Warpstörer-Blaupause
+        en: Structure - Warp Disruptor Blueprint
+        fr: Structure  – Plan de construction Perturbateur de warp
+        ru: Сооружения - чертежи варп-глушителей
+    published: false
+    useBasePrice: true
+1508:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Drohnen-Navigationscomputer-Blaupause
+        en: Structure - Drone Navigation Computer Blueprint
+        fr: Structure – Plan de construction Ordinateur de navigation de drone
+        ru: Сооружения - чертежи модулей наведения дронов
+    published: false
+    useBasePrice: true
+1509:
+    anchorable: false
+    anchored: false
+    categoryID: 66
+    fittableNonSingleton: false
+    name:
+        de: Fertigungsmodifikation
+        en: Assembly Rig
+        fr: Optimisation d'assemblage
+        ru: Тюнинг-модули сборочных цехов
+    published: false
+    useBasePrice: false
+1510:
+    anchorable: false
+    anchored: false
+    categoryID: 66
+    fittableNonSingleton: false
+    name:
+        de: Labormodifikation
+        en: Laboratory Rig
+        fr: Optimisation de laboratoire
+        ru: Тюнинг-модули лабораторий
+    published: false
+    useBasePrice: false
+1511:
+    anchorable: false
+    anchored: false
+    categoryID: 66
+    fittableNonSingleton: false
+    name:
+        de: Zitadellenmodifikation
+        en: Citadel Rig
+        fr: Optimisation de citadelle
+        ru: Тюнинг-модули цитаделей
+    published: false
+    useBasePrice: false
+1512:
+    anchorable: false
+    anchored: false
+    categoryID: 66
+    fittableNonSingleton: false
+    name:
+        de: Bohrmodifikation
+        en: Drilling Rig
+        fr: Optimisation de forage
+        ru: Тюнинг-модули буровых платформ
+    published: false
+    useBasePrice: false
+1513:
+    anchorable: false
+    anchored: false
+    categoryID: 66
+    fittableNonSingleton: false
+    name:
+        de: Überwachungsanlagenmodifikation
+        en: Observatory Rig
+        fr: Optimisation d'observatoire
+        ru: Тюнинг-модули разведкомплексов
+    published: false
+    useBasePrice: false
+1514:
+    anchorable: false
+    anchored: false
+    categoryID: 66
+    fittableNonSingleton: false
+    name:
+        de: Sprungtormodifikation
+        en: Stargate Rig
+        fr: Optimisation de portail stellaire
+        ru: Тюнинг-модули гиперворот
+    published: false
+    useBasePrice: false
+1515:
+    anchorable: false
+    anchored: false
+    categoryID: 66
+    fittableNonSingleton: false
+    name:
+        de: Administrationsmodifikation
+        en: Administration Rig
+        fr: Optimisation de centre administratif
+        ru: Тюнинг-модули административных сооружений
+    published: false
+    useBasePrice: false
+1516:
+    anchorable: false
+    anchored: false
+    categoryID: 66
+    fittableNonSingleton: false
+    name:
+        de: Werbemodifikation
+        en: Ad Rig
+        fr: Optimisation d'agence publicitaire
+        ru: Тюнинг-модули центров пропаганды
+    published: false
+    useBasePrice: false
+1517:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Fertigungsmodifikation-Blaupause
+        en: Structure - Assembly Rig Blueprint
+        fr: Structure – Plan de construction Optimisation d'Assemblage
+        ru: Сооружения - чертежи тюнинг-модулей для сборочных цехов
+    published: false
+    useBasePrice: true
+1520:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Labormodifikation-Blaupause
+        en: Structure - Laboratory Rig Blueprint
+        fr: Structure – Plan de construction Optimisation de laboratoire
+        ru: Сооружения - чертежи тюнинг-модулей для лабораторий
+    published: false
+    useBasePrice: true
+1521:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Zitadellenmodifikation-Blaupause
+        en: Structure - Citadel Rig Blueprint
+        fr: Structure – Plan de construction Optimisation de citadelle
+        ru: Сооружения - чертежи тюнинг-модулей для цитаделей
+    published: false
+    useBasePrice: true
+1522:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Bohrmodifikation-Blaupause
+        en: Structure - Drilling Rig Blueprint
+        fr: Structure – Plan de construction Optimisation de forage
+        ru: Сооружения - чертежи тюнинг-модулей для буровых платформ
+    published: false
+    useBasePrice: true
+1523:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Überwachungsanlagenmodifikation-Blaupause
+        en: Structure - Observatory Rig Blueprint
+        fr: Structure – Plan de construction Optimisation d'observatoire
+        ru: Сооружения - чертежи тюнинг-модулей для обсерваторий
+    published: false
+    useBasePrice: true
+1524:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Sprungtormodifikation-Blaupause
+        en: Structure - Stargate Rig Blueprint
+        fr: Structure – Plan de construction Optimisation de portail stellaire
+        ru: Сооружения - чертежи тюнинг-модулей для ворот
+    published: false
+    useBasePrice: true
+1525:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Verwaltungsmodifikation-Blaupause
+        en: Structure - Administration Rig Blueprint
+        fr: Structure – Plan de construction Optimisation d'administration
+        ru: Сооружения - чертежи тюнинг-модулей для административных сооружений
+    published: false
+    useBasePrice: true
+1526:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Werbemodifikation-Blaupause
+        en: Structure - Ad Rig Blueprint
+        fr: Structure – Plan de construction Optimisation de publicité
+        ru: Сооружения - чертежи тюнинг-модулей для центров пропаганды
+    published: false
+    useBasePrice: true
+1527:
+    anchorable: false
+    anchored: false
+    categoryID: 6
+    fittableNonSingleton: false
+    iconID: 0
+    name:
+        de: Logistik-Fregatte
+        en: Logistics Frigate
+        fr: Frégate logistique
+        ru: Фрегаты боевого обеспечения
+    published: true
+    useBasePrice: false
+1529:
+    anchorable: false
+    anchored: false
+    categoryID: 11
+    fittableNonSingleton: false
+    name:
+        de: Deadspace Sleeper Evoked Munchkin
+        en: Deadspace Sleeper Evoked Munchkin
+        fr: Deadspace Sleeper Evoked Munchkin
+        ru: Deadspace Sleeper Evoked Munchkin
+    published: false
+    useBasePrice: false
+1530:
+    anchorable: false
+    anchored: false
+    categoryID: 11
+    fittableNonSingleton: false
+    name:
+        de: Deadspace Sleeper Evoked Norwegian Forest Cat
+        en: Deadspace Sleeper Evoked Norwegian Forest Cat
+        fr: Deadspace Sleeper Evoked Norwegian Forest Cat
+        ru: Deadspace Sleeper Evoked Norwegian Forest Cat
+    published: false
+    useBasePrice: false
+1533:
+    anchorable: false
+    anchored: false
+    categoryID: 7
+    fittableNonSingleton: false
+    name:
+        de: Mikrosprungfeldgeneratoren
+        en: Micro Jump Field Generators
+        fr: Générateurs de champ de microsaut
+        ru: Генераторы разгонного поля
+    published: true
+    useBasePrice: false
+1534:
+    anchorable: false
+    anchored: false
+    categoryID: 6
+    fittableNonSingleton: false
+    name:
+        de: Kommandozerstörer
+        en: Command Destroyers
+        fr: Destroyers de commandement
+        ru: Лидеры
+    published: true
+    useBasePrice: false
+1535:
+    anchorable: false
+    anchored: false
+    categoryID: 66
+    fittableNonSingleton: false
+    name:
+        de: Signalverstärker
+        en: Signal Amplifier
+        fr: Amplificateur de signal
+        ru: Signal Amplifier
+    published: false
+    useBasePrice: false
+1536:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Struktur - Signalverstärker-Blaupause
+        en: Structure - Signal Amplifier Blueprint
+        fr: Structure – Plan de construction Amplificateur de signal
+        ru: Сооружения - чертежи пассивных усилителей для систем обнаружения целей
+    published: false
+    useBasePrice: false
+1537:
+    anchorable: false
+    anchored: false
+    categoryID: 87
+    fittableNonSingleton: false
+    name:
+        de: Unterstützungsjäger
+        en: Support Fighter
+        fr: Chasseur de support
+        ru: Истребители поддержки
+    published: false
+    useBasePrice: false
+1538:
+    anchorable: false
+    anchored: false
+    categoryID: 6
+    fittableNonSingleton: false
+    iconID: 0
+    name:
+        de: Krafthilfe
+        en: Force Auxiliary
+        fr: Auxiliaire d'armée
+        ru: Вспомогательные КБТ
+    published: false
+    useBasePrice: false
+1542:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Kommandozerstörer-Blaupause
+        en: Command Destroyer Blueprint
+        fr: Plan de construction Destroyer de commandement
+        ru: Чертежи лидеров
+    published: true
+    useBasePrice: false
+1543:
+    anchorable: false
+    anchored: false
+    categoryID: 9
+    fittableNonSingleton: false
+    name:
+        de: Mikrosprungfeldgenerator-Blaupause
+        en: Micro Jump Field Generator Blueprint
+        fr: Plan de construction Générateurs de champ de microsaut
+        ru: Чертежи генераторов разгонного поля
+    published: true
+    useBasePrice: false
+1545:
+    anchorable: false
+    anchored: false
+    categoryID: 16
+    fittableNonSingleton: false
+    name:
+        de: Strukturverwaltung
+        en: Structure Management
+        fr: Gestion de structure
+        ru: Управление сооружениями
+    published: false
+    useBasePrice: true
+1546:
+    anchorable: false
+    anchored: false
+    categoryID: 8
+    fittableNonSingleton: true
+    name:
+        de: Struktur-Anti-Schiff-Lenkwaffe
+        en: Structure Anti-Ship Missile
+        fr: Structure – Missile anti-vaisseau
+        ru: Сооружения - антикорабельная ракета
+    published: false
+    useBasePrice: false
+1547:
+    anchorable: false
+    anchored: false
+    categoryID: 8
+    fittableNonSingleton: true
+    name:
+        de: Struktur-Flak-Lenkwaffe
+        en: Structure Flak Missile
+        fr: Structure – Missile Flak
+        ru: Сооружения - ракета ПКО
+    published: false
+    useBasePrice: false
+1548:
+    anchorable: false
+    anchored: false
+    categoryID: 8
+    fittableNonSingleton: true
+    name:
+        de: Struktur-AoE-Lenkwaffe
+        en: Structure AoE Missile
+        fr: Structure – Missile à effet de zone
+        ru: Сооружения - ракета объёмного взрыва
+    published: false
+    useBasePrice: false
+1549:
+    anchorable: false
+    anchored: false
+    categoryID: 8
+    fittableNonSingleton: true
+    name:
+        de: Struktur-ECM-Skript
+        en: Structure ECM script
+        fr: Structure – Script CME
+        ru: Сооружения - прошивка генераторов помех системам сопровождения целей
+    published: false
+    useBasePrice: false
+1550:
+    anchorable: false
+    anchored: false
+    categoryID: 8
+    fittableNonSingleton: true
+    name:
+        de: Struktur-Stasisnetz-Skript
+        en: Structure Stasis Webifier Script
+        fr: Script de générateur de stase pour structure
+        ru: Сооружения - прошивка для генератора стазис-поля
+    published: false
+    useBasePrice: false
+1551:
+    anchorable: false
+    anchored: false
+    categoryID: 8
+    fittableNonSingleton: true
+    name:
+        de: Struktur-Warpstörer-Skript
+        en: Structure Warp Disruptor Script
+        fr: Script de perturbateur de warp pour structure
+        ru: Сооружения - прошивка для варп-глушителя
+    published: false
+    useBasePrice: false
+1559:
+    anchorable: false
+    anchored: false
+    categoryID: 8
+    fittableNonSingleton: true
+    name:
+        de: Struktur-Resistenzwechsler-Skript
+        en: Structure Resistance Switcher Script
+        fr: Script Aiguilleur de résistance de structure
+        ru: Сооружения - прошивка смены профиля сопротивлений
+    published: false
+    useBasePrice: false
+1566:
+    anchorable: false
+    anchored: false
+    categoryID: 11
+    fittableNonSingleton: false
+    name:
+        de: Serpentis Event-Fregatte
+        en: Serpentis Event Frigate
+        ru: Особый фрегат корпорации «Серпентис»
+    published: false
+    useBasePrice: false
+1567:
+    anchorable: false
+    anchored: false
+    categoryID: 11
+    fittableNonSingleton: false
+    name:
+        de: Serpentis Event-Kreuzer
+        en: Serpentis Event Cruiser
+        ru: Особый крейсер корпорации «Серпентис»
+    published: false
+    useBasePrice: false
+1568:
+    anchorable: false
+    anchored: false
+    categoryID: 11
+    fittableNonSingleton: false
+    name:
+        de: Serpentis Event-Schlachtkreuzer
+        en: Serpentis Event Battlecruiser
+        ru: Особый линейный крейсер корпорации «Серпентис»
+    published: false
+    useBasePrice: false
+1569:
+    anchorable: false
+    anchored: false
+    categoryID: 8
+    fittableNonSingleton: true
+    iconID: 1639
+    name:
+        en: Guidance Disruption Script
+    published: true
     useBasePrice: false
 350858:
     anchorable: false
