@@ -25,6 +25,13 @@ public class Main {
     private static final int HOME_ID = 00000001;
 
     public static void main(String[] args) {
+//        final EveNetwork eve = new DefaultEveNetwork();
+//        final ServerStatusRequest request = new ServerStatusRequest();
+//        final ServerStatusResponse status = eve.execute(request);
+//        System.out.println(status.getOnlinePlayers() + " pilots online");
+//        if (true) return;
+
+
         Scanner reader = new Scanner(System.in);
         boolean exit = false;
         while (!exit) {
@@ -61,7 +68,7 @@ public class Main {
                 case 6:
                     exit = true;
                     showTable(args);
-                    break;
+                    break;                                
                 default:
                     System.out.println("Number: " + n);
             }
@@ -94,6 +101,13 @@ public class Main {
 
         List<MarketItem> items = itemTemplate.listItems();
 
+        fillWithPrices(items, systemByeId, systemSellId);
+
+        System.out.println("Updating items");
+        itemTemplate.updateItemsMarketData(items);
+    }
+
+    private static void fillWithPrices(List<MarketItem> items, int systemByeId, int systemSellId) {
         MarketAPI api = new EveCentralMarketAPI();
         int counter = 0;
         System.out.println("Requesting market data from EVE-CENTRAL API");
@@ -110,9 +124,6 @@ public class Main {
                 System.out.println("API: " + counter + " item processed");
             }
         }
-
-        System.out.println("Updating items");
-        itemTemplate.updateItemsMarketData(items);
     }
 
     private static void showTree(String[] args) {

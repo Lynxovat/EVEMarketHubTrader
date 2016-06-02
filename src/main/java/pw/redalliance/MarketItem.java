@@ -8,7 +8,7 @@ import pw.redalliance.MarketTree.MarketType;
  */
 public class MarketItem {
     public final MarketType type;
-    public ItemMarketData marketData;
+    public ItemMarketData marketData;    
 
     public boolean isSelected() {
         return selected;
@@ -18,7 +18,7 @@ public class MarketItem {
         this.selected = selected;
     }
 
-    private boolean selected = false;
+    private boolean selected = false;    
 
     public MarketItem(MarketType type) {
         this.type = type;

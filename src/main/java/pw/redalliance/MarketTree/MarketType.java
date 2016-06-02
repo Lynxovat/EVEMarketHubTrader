@@ -97,12 +97,7 @@ public class MarketType implements Serializable {
     private String metaGroup;
     private double volume;
     private double basePrice;
-    private int iconId;    
-
-    public void setDBData(MarketTypeDBData data) {
-        setMetaLevel(data.getMetaLevel());
-        setMetaGroup(data.getMetaGroup());
-    }
+    private int iconId;
 
     @Override
     public String toString() {
