@@ -101,13 +101,6 @@ public class Main {
 
         List<MarketItem> items = itemTemplate.listItems();
 
-        fillWithPrices(items, systemByeId, systemSellId);
-
-        System.out.println("Updating items");
-        itemTemplate.updateItemsMarketData(items);
-    }
-
-    private static void fillWithPrices(List<MarketItem> items, int systemByeId, int systemSellId) {
         MarketAPI api = new EveCentralMarketAPI();
         int counter = 0;
         System.out.println("Requesting market data from EVE-CENTRAL API");
@@ -124,13 +117,16 @@ public class Main {
                 System.out.println("API: " + counter + " item processed");
             }
         }
+
+        System.out.println("Updating items");
+        itemTemplate.updateItemsMarketData(items);
     }
 
     private static void showTree(String[] args) {
         Application.launch(MarketTypesTree.class, args);
     }
 
-        private static void showTable(String[] args) {
+    private static void showTable(String[] args) {
         Application.launch(ItemsTable.class, args);
     }
 

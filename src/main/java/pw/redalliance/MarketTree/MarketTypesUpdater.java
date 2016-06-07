@@ -6,7 +6,7 @@ import java.util.*;
 
 public class MarketTypesUpdater {
     private Map<Integer,MarketType> types;
-    private static final String YAML_PATH = "./src/main/resources/";
+    private static final String YAML_PATH = "F:/eve_progs/sde/";
 
 
     public MarketTypesUpdater() {
@@ -38,13 +38,13 @@ public class MarketTypesUpdater {
 
             @Override
             public boolean map(Map<String, Object> entry) {
-                if (!(entry.containsKey(attrKey) && (633 == (int)entry.get(attrKey)))) {
+                if (!(entry.containsKey(attrKey) && (633 == (int) entry.get(attrKey)))) {
                     return false;
                 }
 
                 if (!entry.containsKey(this.valueK)) {
-                    this.key = (Integer)entry.get(keyK);
-                    this.value = ((Double)entry.get("valueFloat")).intValue();
+                    this.key = (Integer) entry.get(keyK);
+                    this.value = ((Double) entry.get("valueFloat")).intValue();
                     return true;
                 }
 
@@ -84,7 +84,24 @@ public class MarketTypesUpdater {
             }
             if (metaGroups.containsKey(typeID)) {
                 type.setMetaGroup(metaGroups.get(typeID));
+            } else {
+                type.setMetaGroup(findMetaGroup(type.getMetaLevel()));
             }
         }
+    }
+
+    private String findMetaGroup(int metaLevel) {
+        if (metaLevel < 0) {
+            return null;
+        } else if (metaLevel < 5) {
+            return "Tech I";
+        } else if (metaLevel < 6) {
+            return "Tech II";
+        } else if (metaLevel < 10) {
+            return "Faction";
+        } else if (metaLevel < 20) {
+            return "Deadspace";
+        }
+        return null;
     }
 }
