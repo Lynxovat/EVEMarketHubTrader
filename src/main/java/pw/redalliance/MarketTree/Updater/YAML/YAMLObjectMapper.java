@@ -7,6 +7,7 @@ import java.util.Objects;
  * Created by Lynx on 13.10.2015.
  */
 public class YAMLObjectMapper<T> implements YAMLMapper {
+    static final Double defValue_d = 0.0;
     private Map<String,Object> result;
 
     @Override
@@ -28,7 +29,11 @@ public class YAMLObjectMapper<T> implements YAMLMapper {
     }
 
     protected Double value_d(String path) {
-        return (Double)value(path, Double.class, 0.0);
+        Double res = (Double)value(path, Double.class, defValue_d);
+        if (res == defValue_d) {
+            res = value_i(path).doubleValue();
+        }
+        return res;
     }
 
     protected Boolean value_b(String path) {
